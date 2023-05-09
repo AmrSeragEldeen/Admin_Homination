@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
 import DataApprovePropsal from './/data_propsal_approve'
 import Table from 'react-bootstrap/Table';
+
 const API = "http://localhost:5000/requests";
 const ApiDataPropsalApprove = () => {
   const [users, setUsers] = useState([]);
@@ -32,6 +33,8 @@ const ApiDataPropsalApprove = () => {
           <th>client_Name</th>
           <th>provider_Name</th>
           <th>service_Name</th>
+          
+          
           
 
         </tr>

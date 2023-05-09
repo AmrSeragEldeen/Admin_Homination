@@ -14,6 +14,9 @@ const DataRejectPropsal = ({users}) => {
                         <td>{client_Name}</td>
                         <td>{provider_Name}</td>
                         <td>{service_Name}</td>
+                        <td>
+                        <button className="btn btn-danger">Delete</button>
+                        </td>
                 </tr>
               );
             } else {

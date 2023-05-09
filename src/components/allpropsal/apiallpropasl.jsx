@@ -32,6 +32,7 @@ const ApiData_allpropsal = () => {
           <th>client_Name</th>
           <th>provider_Name</th>
           <th>service_Name</th>
+          <th>Action</th>
           
 
         </tr>

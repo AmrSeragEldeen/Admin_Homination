@@ -32,6 +32,7 @@ const Apirejectprovider = () => {
           <th>Name</th>
           <th>Email</th>
           <th>Address</th>
+          <th>Action</th>
           
 
         </tr>

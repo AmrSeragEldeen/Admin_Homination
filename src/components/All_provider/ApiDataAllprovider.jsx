@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
-import UserData from './userData';
+import UserData from './userDataAllprovider';
 import Table from 'react-bootstrap/Table';
+import { Button } from 'react-bootstrap';
 const API = "http://localhost:5000/providers";
 const ApiData = () => {
   const [users, setUsers] = useState([]);
@@ -27,11 +28,12 @@ const ApiData = () => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>status</th>
+        
           <th>id</th>
           <th>Name</th>
           <th>Email</th>
-          <th>Address</th>
+          <th>button</th>
+         
           
 
         </tr>

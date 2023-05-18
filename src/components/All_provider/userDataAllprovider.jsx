@@ -15,13 +15,7 @@ const UserData = ({ users }) => {
     }
     const rejectProvider = async (id) => {
         try {
-            const res = await fetch(`http://localhost:5000/providers/reject/${id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ status: "rejected" })
-            });
+            const res = await axios.put(`http://localhost:5000/requests/${id}/reject`)
             const data = await res.json();
             console.log(data);
             window.location.reload();
@@ -45,7 +39,8 @@ const UserData = ({ users }) => {
                                     <button className="btn btn-danger">Reject</button>
                                 </div>
                          )
-                )
+                        
+                
                         
     
      

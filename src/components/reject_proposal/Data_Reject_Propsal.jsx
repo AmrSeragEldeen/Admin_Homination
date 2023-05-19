@@ -1,4 +1,25 @@
 const DataRejectPropsal = ({users}) => {
+
+
+
+
+
+  const deleteProvider = async (id,username) => {
+    try {
+        const res = await fetch(`http://localhost:5000/requests/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify({username})
+          })
+        const data = await res.json();
+        console.log(data);
+        
+    } catch (e) {
+        console.error(e);
+    }
+}
     return (
       <>
         {
@@ -15,7 +36,7 @@ const DataRejectPropsal = ({users}) => {
                         <td>{provider_Name}</td>
                         <td>{service_Name}</td>
                         <td>
-                        <button className="btn btn-danger">Delete</button>
+                        <button className="btn btn-danger" onClick={() => deleteProvider(_id,provider_Name)} >Delete</button>
                         </td>
                 </tr>
               );

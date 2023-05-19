@@ -3,10 +3,10 @@ import Apirejectprovider from '../../components/rejectapi_provider/apireject_pro
 
 type Props = {};
 
-const SaasPage = (props: Props) => {
+const Rejectprovider = (props: Props) => {
   return (
     <div><Apirejectprovider/></div>
   );
 };
 
-export default SaasPage;
+export default Rejectprovider;

@@ -4,10 +4,10 @@ import Apiapproveprovider from '../../components/approveapi_provider/api_approve
 
 type Props = {};
 
-const AnalyticsPage = (props: Props) => {
+const Approveprovider = (props: Props) => {
   return (
     <div> <Apiapproveprovider/></div>
   );
 };
 
-export default AnalyticsPage;
+export default Approveprovider;

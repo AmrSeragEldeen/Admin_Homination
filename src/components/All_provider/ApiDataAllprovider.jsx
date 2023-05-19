@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
 import UserData from './userDataAllprovider';
 import Table from 'react-bootstrap/Table';
-import { Button } from 'react-bootstrap';
-const API = "http://localhost:5000/providers";
+
+const API = "http://localhost:5000/newproviders/";
 const ApiData = () => {
   const [users, setUsers] = useState([]);
   const fetchUsers = async (url) => {
@@ -32,7 +32,8 @@ const ApiData = () => {
           <th>id</th>
           <th>Name</th>
           <th>Email</th>
-          <th>button</th>
+          <th>Address</th>
+          <th>Action</th>
          
           
 

@@ -1,4 +1,20 @@
 const Datarejectprovider = ({users}) => {
+   const deleteProvider = async (id,username) => {
+    try {
+        const res = await fetch(`http://localhost:5000/requests/${id}`, {
+            method:"DELETE",
+            body:JSON.stringify({username})
+      
+          })
+      
+          
+        const data = await res.json();
+        console.log(data);
+       
+    } catch (e) {
+        console.error(e);
+    }
+} 
     return (
       <>
         {
@@ -14,9 +30,7 @@ const Datarejectprovider = ({users}) => {
                   <td>{name}</td>
                   <td>{email}</td>
                   <td>{address}</td>
-                  <td>
-                        <button className="btn btn-danger">Delete</button>
-                        </td>
+                  
                 </tr>
               );
             } else {

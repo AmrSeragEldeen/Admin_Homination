@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
-import Datarejectprovider from './/data_rejectprovider'
+import Dataprovider from './data_provider';
 import Table from 'react-bootstrap/Table';
-const API = "http://localhost:5000/newproviders";
-const Apirejectprovider = () => {
+
+const API = "http://localhost:5000/newproviders/";
+const ApiDataprovider = () => {
   const [users, setUsers] = useState([]);
   const fetchUsers = async (url) => {
       try {
@@ -27,18 +28,19 @@ const Apirejectprovider = () => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>status</th>
+        
           <th>id</th>
           <th>Name</th>
           <th>Email</th>
           <th>Address</th>
           
+         
           
 
         </tr>
       </thead>
       <tbody>
-      <Datarejectprovider users={users}/>
+      <Dataprovider users={users}/>
         
       </tbody>
     </Table>
@@ -47,4 +49,4 @@ const Apirejectprovider = () => {
   );
 };
 
-export default Apirejectprovider;
+export default ApiDataprovider;

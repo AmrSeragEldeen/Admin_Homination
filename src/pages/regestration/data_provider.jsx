@@ -1,4 +1,4 @@
-const UserData = ({ users }) => {
+const  Dataprovider = ({ users }) => {
 
 
     const acceptProvider = async (id) => {
@@ -18,7 +18,6 @@ const UserData = ({ users }) => {
             console.error(e);
         }
     }
-
 
     const rejectProvider = async (id) => {
         try {
@@ -46,24 +45,9 @@ const UserData = ({ users }) => {
         <>
             {   
                 users.map((curUser) => {
-                    const { _id, status, name, email, address } = curUser;
-                    let button = null;
-                    if (status === "pending") {
-                        button = (
-                            <>
-                                <div className="btn-group  ">
-                                    <button className="btn btn-outline-primary">Approve</button>
-                                    <button className="btn btn-danger">Reject</button>
-                                </div>
-
-                            </>
-                        );
-                    } else if (status === "accepted") {
-                        button = <button className="btn btn-outline-danger" onClick={() => rejectProvider(_id)}> Reject </button>;
-                    }
-                    else if (status === "rejected") {
-                        button = <button className="btn btn-outline-primary" onClick={() => acceptProvider(_id)}> Accept </button>;
-                    }
+                    const { _id,  name, email, address } = curUser;
+                    
+                    
                     return (
                         <tr key={_id}>
                             
@@ -71,7 +55,7 @@ const UserData = ({ users }) => {
                             <td>{name}</td>
                             <td>{email}</td>
                             <td>{address}</td>
-                            <td>{button}</td>
+                           
 
                         </tr>
                     )
@@ -82,4 +66,4 @@ const UserData = ({ users }) => {
     )
 }
 
-export default UserData;
+export default Dataprovider;

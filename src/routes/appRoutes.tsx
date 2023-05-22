@@ -2,7 +2,7 @@ import DashboardPageLayout from "../pages/new provider/DashboardPageLayout";
 import { RouteType } from "./config";
 
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined';
-import Approveprovider from "../pages/new provider/Approv_provider";
+import Apiapproveprovider from "../components/approveapi_provider/api_approve";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import Rejectprovider from "../pages/new provider/reject_provider";
 import ComponentPageLayout from "../pages/component/ComponentPageLayout";
@@ -64,7 +64,7 @@ const appRoutes: RouteType[] = [
   //------------------------------------------//
   {
     path: "/Showallprovider",
-    element: <Showallprovider />,
+    element: <Apiapproveprovider/>,
     state: "Home",
     sidebarProps: {
       displayText: "Providers",

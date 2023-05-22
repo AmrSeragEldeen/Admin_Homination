@@ -28,7 +28,7 @@ const Apiapproveprovider = () => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>status</th>
+          
           <th>id</th>
           <th>Name</th>
           <th>Email</th>

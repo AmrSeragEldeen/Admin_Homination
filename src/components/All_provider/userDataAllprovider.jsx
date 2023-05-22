@@ -52,8 +52,8 @@ const UserData = ({ users }) => {
                         button = (
                             <>
                                 <div className="btn-group  ">
-                                    <button className="btn btn-outline-primary">Approve</button>
-                                    <button className="btn btn-danger">Reject</button>
+                                    <button className="btn btn-outline-primary" onClick={() => acceptProvider(_id)}>Approve</button>
+                                    <button className="btn btn-danger" onClick={() => rejectProvider(_id)}>Reject</button>
                                 </div>
 
                             </>

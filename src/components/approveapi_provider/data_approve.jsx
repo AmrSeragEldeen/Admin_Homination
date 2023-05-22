@@ -1,29 +1,46 @@
 const Dataapproveprovider = ({users}) => {
+
+
+  const deleteProvider = async (id,username) => {
+    try {
+        const res = await fetch(`http://localhost:5000/providers/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify({username})
+          })
+        const data = await res.json();
+        console.log(data);
+        
+    } catch (e) {
+        console.error(e);
+    }
+}
     return (
       <>
         {
           users.map((curUser) => {
-            const {_id, status, name, email, address} = curUser;
+            const {_id,    name, email, address,username} = curUser;
   
             // Check if the current user's status is "accepted"
-            if (status === "accepted") {
-              return (
-                <tr key={_id}>
-                  <td>{status}</td>
-                  <td>{_id}</td>
-                  <td>{name}</td>
-                  <td>{email}</td>
-                  <td>{address}</td>
-                  <td>
-                        <button className="btn btn-danger">Delete</button>
-                        </td>
-                </tr>
-              );
-            } else {
+            return( <tr key={_id}>
+              
+              <td>{_id}</td>
+              <td>{name}</td>
+              <td>{email}</td>
+              <td>{address}</td>
+              <td>
+                    <button className="btn btn-danger" onClick={()=>deleteProvider(_id,username)}>Delete</button>
+                    </td>
+            </tr>)
+              
+              
+            
               // If the current user's status is not "accepted", return null
-              return null;
+            
             }
-          })
+          )
         }
       </>
     );

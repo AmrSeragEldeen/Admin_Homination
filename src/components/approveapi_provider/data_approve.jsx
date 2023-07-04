@@ -3,7 +3,7 @@ const Dataapproveprovider = ({users}) => {
 
   const deleteProvider = async (id,username) => {
     try {
-        const res = await fetch(`http://localhost:5000/providers/${id}`, {
+        const res = await fetch(`https://homination.onrender.com/providers/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
 import Datarejectprovider from './/data_rejectprovider'
 import Table from 'react-bootstrap/Table';
-const API = "http://localhost:5000/newproviders";
+const API = "https://homination.onrender.com/newproviders";
 const Apirejectprovider = () => {
   const [users, setUsers] = useState([]);
   const fetchUsers = async (url) => {

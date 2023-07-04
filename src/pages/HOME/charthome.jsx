@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 const ApiDataChart = () => {
-    const API = "http://localhost:5000/requests";
+    const API = "https://homination.onrender.com/requests";
     const [users, setUsers] = useState([]);
   
     const fetchUsers = async (url) => {

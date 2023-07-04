@@ -1,26 +1,21 @@
-
+import axios from "axios";
 const Dataallpropsal = ({ users }) => {
-  const acceptProposal = async (id,provider) => {
-    try {
-        const res = await fetch(`http://localhost:5000/requests/${id}/accept`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            
-            body: JSON.stringify({ provider , status: "accepted" })
-            
-        });
+const acceptProposal = async (id,provider) => {
+    try
+    {
+        
+        
+        const res = await axios.put(`https://homination.onrender.com/requests/${id}/accept`,{provider})
         const data =  res.json();
         console.log(data);
-       
+    
     } catch (e) {
         console.error(e);
     }
 }
 const rejectProposal = async (id,provider) => {
     try {
-        const res = await fetch(`http://localhost:5000/requests/${id}/reject/`, {
+        const res = await fetch(`https://homination.onrender.com/requests/${id}/reject/`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -29,7 +24,7 @@ const rejectProposal = async (id,provider) => {
         });
         const data = await res.json();
         console.log(data);
-        window.location.reload();
+        
     } catch (e) {
         console.error(e);
     }

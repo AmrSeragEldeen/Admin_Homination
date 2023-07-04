@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import DataApprovePropsal from './/data_propsal_approve'
 import Table from 'react-bootstrap/Table';
 
-const API = "http://localhost:5000/requests";
+const API = "https://homination.onrender.com/requests";
 const ApiDataPropsalApprove = () => {
   const [users, setUsers] = useState([]);
   const fetchUsers = async (url) => {

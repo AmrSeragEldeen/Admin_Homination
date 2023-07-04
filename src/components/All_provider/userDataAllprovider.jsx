@@ -2,9 +2,9 @@ const UserData = ({ users }) => {
 
 
     const acceptProvider = async (id) => {
-        
+    
     try {
-            const res = await fetch(`http://localhost:5000/newproviders/accept/${id}`, {
+            const res = await fetch(`https://homination.onrender.com/newproviders/accept/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -15,14 +15,14 @@ const UserData = ({ users }) => {
             console.log(data);
             window.location.reload();
         } catch (e) {
-            console.error(e);
+        console.error(e);
         }
     }
 
 
     const rejectProvider = async (id) => {
         try {
-            const res = await fetch(`http://localhost:5000/newproviders/reject/${id}`, {
+            const res = await fetch(`https://homination.onrender.com/newproviders/reject/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
 import Dataallpropsal from './dataallpropsal';
 import Table from 'react-bootstrap/Table';
-const API = "http://localhost:5000/requests";
+const API = "https://homination.onrender.com/requests";
 const ApiData_allpropsal = () => {
   const [users, setUsers] = useState([]);
   const fetchUsers = async (url) => {

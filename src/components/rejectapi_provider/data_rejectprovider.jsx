@@ -1,7 +1,7 @@
 const Datarejectprovider = ({users}) => {
    const deleteProvider = async (id,username) => {
     try {
-        const res = await fetch(`http://localhost:5000/requests/${id}`, {
+        const res = await fetch(`https://homination.onrender.com/requests/${id}`, {
             method:"DELETE",
             body:JSON.stringify({username})
       

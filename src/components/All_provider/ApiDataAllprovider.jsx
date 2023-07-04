@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import UserData from './userDataAllprovider';
 import Table from 'react-bootstrap/Table';
 
-const API = "http://localhost:5000/newproviders/";
+const API = "https://homination.onrender.com/newproviders/";
 const ApiData = () => {
   const [users, setUsers] = useState([]);
   const fetchUsers = async (url) => {
